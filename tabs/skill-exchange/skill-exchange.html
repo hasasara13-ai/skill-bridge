@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge | Skill Exchange & Challenges</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/skill-exchange/skill-exchange.css">
+  <script src="../../scripts/shared/store.js" defer></script>
+  <script src="../../scripts/skill-exchange/skill-exchange.js" defer></script>
+</head>
+
+<body class="skill-page">
+  <main class="page-container">
+    <div class="page-links">
+      <a href="../../tabs/home/user.html">&larr; Back to profile</a>
+    </div>
+
+    <header class="page-heading">
+      <h1>Learn, challenge, connect.</h1>
+      <p>Test your knowledge and meet students who can help you grow.</p>
+    </header>
+
+    <section class="white-panel" aria-label="Skill Exchange and Challenges">
+      <div class="section-tabs">
+        <a href="challenges.html" class="section-tab">Challenges</a>
+        <a href="skill-exchange.html" class="section-tab active">Skill Exchange</a>
+      </div>
+
+      <!-- SKILL EXCHANGE TAB -->
+      <section id="exchangePanel">
+        <div class="panel-intro">
+          <div>
+            <h2>Find Your Skill Match</h2>
+            <p>Learn from students with experience, and share the skills you know.</p>
+          </div>
+        </div>
+        <div class="exchange-filters">
+          <label for="learnSkill">I want to learn
+            <select id="learnSkill">
+              <option>Programming</option>
+              <option>Web Development</option>
+              <option>Design</option>
+              <option>Languages</option>
+              <option>Photography</option>
+              <option>Data Analysis</option>
+            </select>
+          </label>
+          <label for="teachSkill">I can teach
+            <select id="teachSkill">
+              <option>Programming</option>
+              <option>Web Development</option>
+              <option>Design</option>
+              <option>Languages</option>
+              <option>Photography</option>
+              <option>Data Analysis</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="group-heading">
+          <h3>Students you can learn from</h3>
+          <p>These students are experienced in the skill you selected.</p>
+        </div>
+        <div id="mentorsList" class="student-grid"></div>
+
+        <div class="group-heading group-divider">
+          <h3>Students you can help</h3>
+          <p>These students want to learn something you already know.</p>
+        </div>
+        <div id="learnersList" class="student-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <!-- STUDENT PROFILE POPUP -->
+  <div id="profileModal" class="modal-overlay" hidden>
+    <div class="popup profile-popup" role="dialog" aria-modal="true" aria-labelledby="profileTitle">
+      <div class="popup-heading">
+        <h2 id="profileTitle">Student profile</h2>
+        <button type="button" class="close-popup" id="closeProfile" aria-label="Close profile">&times;</button>
+      </div>
+      <div id="profileContent"></div>
+    </div>
+  </div>
+</body>
+
+</html>

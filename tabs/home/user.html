@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- makes the page fit phone screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - SkillBridge</title>
+    <!-- shared styles first, then the styles of this page -->
+    <!-- ../../ goes up two folders (home -> tabs -> skill-bridge) -->
+    <link rel="stylesheet" href="../../styles/style.css">
+    <link rel="stylesheet" href="../../styles/home/user.css">
+</head>
+
+<!-- user-page gives the whole page the light blue background -->
+<body class="user-page">
+
+    <!-- NAVBAR (same as explore.html) -->
+    <div class="navbar">
+        <a href="explore.html"><img src="../../images/SkillBridge.png" alt="SkillBridge"></a>
+        <ul class="nav-links">
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="user.html" class="active">My Profile</a></li>
+            <li><a href="welcome.html" class="btn">Log out</a></li>
+        </ul>
+    </div>
+    
+    <!-- centers everything and limits the width -->
+    <div class="container">
+
+        <h1>My Profile</h1>
+        <p class="subtitle">Learn, teach, and grow together.</p>
+
+        <!-- profile card on the left, buttons on the right -->
+        <div class="layout">
+
+            <!-- empty on purpose: user.js fills it with the name, email, major and interests -->
+            <div class="card" id="profileCard"></div>
+
+            <!-- the three big buttons; each one is a link to another tab -->
+            <div class="actions">
+                <!-- class="action" = shared button style, "learn" = this button's own style -->
+                <a class="action learn" href="../learning/dashboard.html">
+                    <strong>Learn</strong>
+                    <span>Go to my learning journey</span>
+                </a>
+
+                <a class="action teach" href="../teaching/teaching.html">
+                    <strong>Teach</strong>
+                    <span>Share a skill with others</span>
+                </a>
+
+                <a class="action exchange" href="../skill-exchange/skill-exchange.html">
+                    <strong>Skill Exchange & Challenges</strong>
+                    <span>Connect with peers and put your skills to the test</span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- scripts are loaded at the end, in this order: -->
+    <!-- 1. store.js: shared code for saving and reading data -->
+    <!-- 2. data.js: the learning data -->
+    <!-- 3. user.js: fills the profile card (it needs the two files above, so it comes last) -->
+    <script src="../../scripts/shared_LT/store.js"></script>
+    <script src="../../scripts/learning/data.js"></script>
+    <script src="../../scripts/home/user.js"></script>
+</body>
+
+</html>

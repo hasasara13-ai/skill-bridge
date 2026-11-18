@@ -1,0 +1,129 @@
+/* ===== PAGE CONTENT ===== */
+/* max 1000px wide; margin auto centers it on big screens */
+.content {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* ===== WEEKLY CHALLENGE ===== */
+/* blue box: text on the left, button on the right */
+.challenge {
+  display: flex;
+  justify-content: space-between;   /* pushes the text and the button apart */
+  align-items: center;              /* centers them vertically */
+  background-color: #B5D4F4;
+  border-radius: 12px;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+  color: #0C447C;
+  font-size: 18px;
+}
+
+/* ===== WHITE BOXES ===== */
+.box {
+  background-color: white;
+  border: 1px solid #dbe6f2;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+/* removes the empty space above the box title */
+.box h2 {
+  margin-top: 0;
+}
+
+/* ===== DEPARTMENT BUTTONS ===== */
+/* buttons in a row; flex-wrap moves them to a new line when there is no space */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* round buttons with a light blue border */
+.categories button {
+  padding: 8px 15px;
+  border: 1px solid #B5D4F4;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;          /* hand icon when you point at it */
+}
+
+/* the button turns blue when the mouse is on it */
+.categories button:hover {
+  background-color: #185FA5;
+  color: white;
+}
+
+/* green "... saved!" message; fixed height so the cards don't jump */
+.message {
+  color: #3B6D11;
+  font-weight: bold;
+  height: 20px;
+}
+
+/* ===== SKILL CARDS ===== */
+/* cards in rows of three; extra cards go to the next line */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* 31% wide, so three cards plus the gaps fit in one row */
+.card {
+  width: 31%;
+  background-color: #f4f8fc;
+  border: 1px solid #dbe6f2;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #5f6b7a;
+  font-size: 14px;
+}
+
+/* the small Save button */
+.card button {
+  background-color: white;
+  border: 1px solid #185FA5;
+  border-radius: 8px;
+  color: #185FA5;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+/* ===== SKILL OF THE DAY + LIVE ACTIVITY ===== */
+/* the two boxes next to each other */
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+/* both boxes get the same width */
+.row .box {
+  flex: 1;
+}
+
+/* ===== PHONES ===== */
+/* when the screen is 700px or smaller */
+@media (max-width: 700px) {
+  /* things that were next to each other go under each other */
+  .challenge,
+  .row {
+    flex-direction: column;
+  }
+
+  /* one card per row */
+  .card {
+    width: 100%;
+  }
+}

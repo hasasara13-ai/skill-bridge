@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log in - SkillBridge</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../../styles/home/auth.css">
+</head>
+<body class="auth-page">
+
+  <div class="auth-box">
+
+    <a href="welcome.html"><img src="../../images/SkillBridge.png" alt="SkillBridge"></a>
+
+    <h1>Welcome back</h1>
+    <p>Log in with your Epoka account</p>
+
+    <form id="loginForm" action="user.html">
+      <label>Email</label>
+      <input type="email" id="email" required>
+
+      <label>Password</label>
+      <input type="password" id="password" required>
+
+      <p id="error"></p>
+
+      <button type="submit">Log in</button>
+    </form>
+
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+
+  </div>
+
+  <script src="../../scripts/shared_LT/store.js"></script>
+  <script src="../../scripts/home/login.js"></script>
+</body>
+</html>
